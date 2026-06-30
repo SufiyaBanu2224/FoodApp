@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f7f2;
+}
+
+/* Header */
+
+header{
+    background:#355E3B;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    font-size:38px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:16px;
+}
+
+/* Menu Grid */
+
+.menu-container{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* Card */
+
+.card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* Content */
+
+.content{
+    padding:18px;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.top h2{
+    color:#355E3B;
+    font-size:22px;
+}
+
+.price{
+    background:#355E3B;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.description{
+    color:#666;
+    line-height:1.5;
+    margin-bottom:15px;
+    font-size:15px;
+}
+
+.details{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    font-size:15px;
+    color:#444;
+}
+
+.badge{
+    display:inline-block;
+    background:#d4edda;
+    color:#155724;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* Button */
+
+.btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    background:#355E3B;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.btn:hover{
+    background:#4c7a53;
+}
+
+/* Footer */
+
+footer{
+    background:#243B2E;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🍴 Restaurant Menu</h1>
+    <p>Choose Your Favorite Dish</p>
+</header>
+
+<section class="menu-container">
+
+    <!-- Card 1 -->
+
+    <div class="card">
+        <img src="Images/menuImages/margheritapizza.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Margherita Pizza</h2>
+                <span class="price">₹299</span>
+            </div>
+
+            <p class="description">
+                Classic cheesy pizza topped with fresh mozzarella and tomato sauce.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.8</span>
+                <span>🔥 Bestseller</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="card">
+        <img src="Images/menuImages/farmhousepizza.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Farmhouse Pizza</h2>
+                <span class="price">₹399</span>
+            </div>
+
+            <p class="description">
+                Loaded with onion, capsicum, mushrooms and fresh vegetables.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.7</span>
+                <span>🌱 Veg</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="card">
+        <img src="Images/menuImages/paneer.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Paneer Butter Masala</h2>
+                <span class="price">₹250</span>
+            </div>
+
+            <p class="description">
+                Creamy paneer curry prepared with rich butter and aromatic spices.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.9</span>
+                <span>🥘 Curry</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+
+    <div class="card">
+        <img src="Images/menuImages/vegBiryani.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Veg Biryani</h2>
+                <span class="price">₹220</span>
+            </div>
+
+            <p class="description">
+                Spicy basmati rice cooked with fresh vegetables and Indian spices.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.6</span>
+                <span>🍚 Rice</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+
+    <div class="card">
+        <img src="Images/menuImages/cheeseBurger.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Cheese Burger</h2>
+                <span class="price">₹180</span>
+            </div>
+
+            <p class="description">
+                Juicy burger filled with cheese, fresh vegetables and crispy patty.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.7</span>
+                <span>🍔 Fast Food</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+
+    <div class="card">
+        <img src="Images/menuImages/frenchFries.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>French Fries</h2>
+                <span class="price">₹120</span>
+            </div>
+
+            <p class="description">
+                Crispy golden potato fries served with tomato ketchup.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.5</span>
+                <span>🍟 Snacks</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 7 -->
+
+    <div class="card">
+        <img src="Images/menuImages/sushi.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Sushi Roll</h2>
+                <span class="price">₹450</span>
+            </div>
+
+            <p class="description">
+                Authentic Japanese sushi roll made with rice and vegetables.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.8</span>
+                <span>🍣 Japanese</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 8 -->
+
+    <div class="card">
+        <img src="Images/menuImages/ramen.png" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Ramen</h2>
+                <span class="price">₹380</span>
+            </div>
+
+            <p class="description">
+                Hot Japanese noodles served in rich flavorful broth.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.8</span>
+                <span>🍜 Noodles</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 9 -->
+
+    <div class="card">
+        <img src="Images/menuImages/butterNaan.png" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Butter Naan</h2>
+                <span class="price">₹60</span>
+            </div>
+
+            <p class="description">
+                Soft Indian naan topped with fresh butter and herbs.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.6</span>
+                <span>🫓 Bread</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+    <!-- Card 10 -->
+
+    <div class="card">
+        <img src="Images/menuImages/butterChicken.jpg" alt="">
+        <div class="content">
+
+            <div class="top">
+                <h2>Chicken Curry</h2>
+                <span class="price">₹320</span>
+            </div>
+
+            <p class="description">
+                Delicious chicken curry cooked in creamy butter gravy.
+            </p>
+
+            <div class="details">
+                <span>⭐ 4.9</span>
+                <span>🍗 Non-Veg</span>
+            </div>
+
+            <span class="badge">Available</span>
+
+            <a href="#" class="btn">Add to Cart</a>
+
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Food Gallery | Fresh Food • Great Taste • Fast Delivery
+</footer>
+
+</body>
+</html>

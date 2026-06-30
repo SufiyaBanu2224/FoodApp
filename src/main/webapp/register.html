@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Gallery | Sign Up</title>
+<style>
+:root{--leaf:#244632;--leaf-2:#356747;--mint:#ecf7e9;--paper:#fffaf1;--ink:#18251c;--muted:#657065;--tomato:#d94f2f;--gold:#f5b84b;--line:#dde6d6;--shadow:0 18px 45px rgba(31,51,38,.16)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+body{min-height:100vh;background:radial-gradient(circle at top left,rgba(245,184,75,.24),transparent 30%),linear-gradient(135deg,#fffaf1,#edf7e9);color:var(--ink)}
+.navbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 7%;background:rgba(36,70,50,.92);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(16,34,23,.16);animation:slideDown .5s ease}.logo{color:white;font-size:28px;font-weight:850}.logo span{color:var(--gold)}.nav-links{list-style:none;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.nav-links a{text-decoration:none;color:white;font-size:15px;font-weight:800;padding:9px 12px;border-radius:999px;transition:.25s}.nav-links a:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}.signup-btn{background:white;color:var(--leaf)!important}
+.container{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,460px);gap:36px;align-items:center;width:min(1120px,92%);margin:40px auto}.intro{animation:fadeUp .65s ease both}.intro h1{font-size:clamp(38px,6vw,68px);line-height:1.02;color:var(--leaf);margin-bottom:16px}.intro p{font-size:18px;line-height:1.65;color:var(--muted);max-width:560px}.spark{display:inline-block;margin-bottom:16px;background:#fff0d0;color:#5d4310;border:1px solid #f4d28b;padding:8px 12px;border-radius:999px;font-weight:900}
+.signup-card{background:rgba(255,255,255,.94);border:1px solid rgba(221,230,214,.95);border-radius:22px;padding:32px;box-shadow:var(--shadow);animation:fadeUp .7s ease .08s both}.signup-card h2{text-align:center;color:var(--leaf);margin-bottom:8px;font-size:32px}.signup-card p{text-align:center;color:var(--muted);margin-bottom:24px}.form-group{margin-bottom:16px}.form-group label{display:block;margin-bottom:7px;color:#3d493f;font-weight:900}.form-group input,.form-group textarea,.form-group select{width:100%;padding:13px;border:1px solid #c9d8c2;border-radius:14px;font-size:15px;outline:none;background:#fbfff8;transition:.22s}.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--leaf-2);box-shadow:0 0 0 4px rgba(53,103,71,.13);transform:translateY(-1px)}textarea{resize:vertical;height:88px}button{width:100%;padding:14px;border:none;border-radius:999px;background:linear-gradient(135deg,var(--tomato),#e78a3f);color:white;font-size:16px;font-weight:900;cursor:pointer;box-shadow:0 12px 24px rgba(217,79,47,.25);transition:.25s}button:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(217,79,47,.34)}.login-link{margin-top:18px;text-align:center;color:var(--muted)}.login-link a{color:var(--tomato);font-weight:900;text-decoration:none}.login-link a:hover{text-decoration:underline}footer{background:var(--leaf);color:white;text-align:center;padding:20px;margin-top:36px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+@media(max-width:860px){.navbar{align-items:flex-start;flex-direction:column}.container{grid-template-columns:1fr}.intro{text-align:left}.signup-card{padding:26px}}
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">Food<span>Gallery</span></div>
+    <ul class="nav-links">
+        <li><a href="home">Home</a></li>
+        <li><a href="cart">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <section class="intro">
+        <div class="spark">Join the table</div>
+        <h1>Create your food account.</h1>
+        <p>Save your address, browse restaurants faster, and place orders with a smoother checkout.</p>
+    </section>
+    <section class="signup-card">
+        <h2>Create Account</h2>
+        <p>Start exploring delicious food from your favorite restaurants.</p>
+        <form action="register" method="post">
+            <div class="form-group"><label for="userName">Username</label><input type="text" id="userName" name="userName" placeholder="Enter your username" required></div>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="Enter your email" required></div>
+            <div class="form-group"><label for="password">Password</label><input type="password" id="password" name="password" placeholder="Enter your password" required></div>
+            <div class="form-group"><label for="address">Address</label><textarea id="address" name="address" placeholder="Enter your address" required></textarea></div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="Customer">Customer</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+        <div class="login-link">Already have an account? <a href="login.html">Login Here</a></div>
+    </section>
+</main>
+<footer>&copy; 2026 Food Gallery | Fresh food, fast delivery, great taste</footer>
+<script>
+const params = new URLSearchParams(window.location.search);
+if(params.get("error") === "emailExists"){ alert("Email already exists. Please login or use another email."); }
+if(params.get("success") === "true"){ alert("Registration Successful!"); }
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Gallery</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f7f2;
+}
+
+/* Header */
+
+header{
+    background:#355E3B;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    font-size:40px;
+    letter-spacing:1px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:16px;
+}
+
+/* Cards */
+
+.container{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h2{
+    color:#355E3B;
+    margin-bottom:10px;
+}
+
+.type{
+    color:#777;
+    margin-bottom:12px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    color:#555;
+    font-weight:bold;
+}
+
+.address{
+    color:#666;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#355E3B;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#4C7A53;
+}
+
+/* Footer */
+
+footer{
+    background:#243B2E;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🍽 Food Gallery</h1>
+
+<p>Discover the Best Restaurants Near You</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Pizza Hub</h2>
+
+<p class="type">Italian Cuisine</p>
+
+<div class="info">
+<span>⭐ 4.5</span>
+<span>30 mins</span>
+</div>
+
+<p class="address">📍 MG Road, Bangalore</p>
+
+<button>View Menu</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Spice Garden</h2>
+
+<p class="type">Indian Cuisine</p>
+
+<div class="info">
+<span>⭐ 4.2</span>
+<span>25 mins</span>
+</div>
+
+<p class="address">📍 BTM Layout, Bangalore</p>
+
+<button>View Menu</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Burger Town</h2>
+
+<p class="type">Fast Food</p>
+
+<div class="info">
+<span>⭐ 4.0</span>
+<span>20 mins</span>
+</div>
+
+<p class="address">📍 Indiranagar, Bangalore</p>
+
+<button>View Menu</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Sushi World</h2>
+
+<p class="type">Japanese Cuisine</p>
+
+<div class="info">
+<span>⭐ 4.7</span>
+<span>40 mins</span>
+</div>
+
+<p class="address">📍 Koramangala, Bangalore</p>
+
+<button>View Menu</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Tandoori Treat</h2>
+
+<p class="type">North Indian</p>
+
+<div class="info">
+<span>⭐ 4.3</span>
+<span>35 mins</span>
+</div>
+
+<p class="address">📍 Whitefield, Bangalore</p>
+
+<button>View Menu</button>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Food Gallery | Fresh Food • Fast Delivery • Great Taste
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Gallery | Login</title>
+<style>
+:root{--leaf:#244632;--leaf-2:#356747;--mint:#ecf7e9;--paper:#fffaf1;--ink:#18251c;--muted:#657065;--tomato:#d94f2f;--gold:#f5b84b;--line:#dde6d6;--shadow:0 18px 45px rgba(31,51,38,.16)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+body{min-height:100vh;background:linear-gradient(120deg,rgba(36,70,50,.88),rgba(217,79,47,.62)),url("Images/pizza.jpg");background-size:cover;background-position:center;display:grid;place-items:center;padding:28px;color:var(--ink)}
+.login-box{width:min(420px,100%);background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.65);border-radius:22px;padding:38px 34px;box-shadow:var(--shadow);backdrop-filter:blur(14px);animation:popIn .65s ease both}
+.brand{text-align:center;margin-bottom:28px}.brand .mark{width:60px;height:60px;margin:0 auto 12px;border-radius:18px;background:linear-gradient(135deg,var(--gold),var(--tomato));box-shadow:0 12px 26px rgba(217,79,47,.24);animation:float 4s ease-in-out infinite}.brand h1{color:var(--leaf);font-size:34px;line-height:1}.brand p{color:var(--muted);margin-top:8px}
+.input-group{margin-bottom:18px}.input-group label{display:block;margin-bottom:8px;color:#3d493f;font-weight:900}.input-group input{width:100%;padding:14px;border:1px solid #c9d8c2;border-radius:14px;font-size:15px;outline:none;background:#fbfff8;transition:.22s}.input-group input:focus{border-color:var(--leaf-2);box-shadow:0 0 0 4px rgba(53,103,71,.13);transform:translateY(-1px)}
+.login-btn{width:100%;padding:14px;border:none;border-radius:999px;background:linear-gradient(135deg,var(--tomato),#e78a3f);color:white;font-size:16px;font-weight:900;cursor:pointer;box-shadow:0 12px 24px rgba(217,79,47,.25);transition:.25s}.login-btn:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(217,79,47,.34)}
+.bottom-text{text-align:center;margin-top:22px;color:var(--muted);font-size:14px}.bottom-text a{text-decoration:none;color:var(--tomato);font-weight:900}.bottom-text a:hover{text-decoration:underline}.home-link{display:block;text-align:center;margin-top:14px;color:var(--leaf);font-weight:900;text-decoration:none}
+@keyframes popIn{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+</style>
+</head>
+<body>
+<div class="login-box">
+    <div class="brand">
+        <div class="mark"></div>
+        <h1>Food Gallery</h1>
+        <p>Welcome back. Dinner is close.</p>
+    </div>
+    <form action="login" method="post">
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div class="bottom-text">Don't have an account? <a href="register.html">Sign Up</a></div>
+    <a class="home-link" href="home">Back to restaurants</a>
+</div>
+</body>
+</html>
