@@ -18,3 +18,4 @@ Food Gallery is a Java Servlet and JSP food-ordering web app for browsing restau
 - `/checkout` places the order for a logged-in user.
 - `/order-confirmation?orderId=1` shows the order confirmation.
 # FoodApp
+# FoodApp
